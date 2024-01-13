@@ -9,7 +9,7 @@ export const NavigationPane = () => {
             <span className="header-name">Venkatesh</span>
             <div className="navigation-flex-container">
                 {
-                    headerList.map( ele => <a href={ele === 'Home' ? '/' : `/${ele}`}><span>{ele}</span></a>)
+                    headerList.map( ele => <a href={ele === 'Home' ? '/' : `#/${ele}`}><span>{ele}</span></a>)
                 }
             </div>
         </div>

@@ -1,20 +1,20 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import { NavigationPane } from './components/Navigation';
 import TicTacToe from './components/Games/TicTacToe';
 import { Playground } from './pages/playground';
 function App() {
   return (
-   <BrowserRouter>
+   <HashRouter>
     <div className="App">
     <NavigationPane />
       <Routes>
-        <Route path='/' element={<h2>Home Page</h2>}>
+        <Route exact path='/' element={<h2>Home Page</h2>}>
         </Route>
-        <Route exact path='/Playground' element={<TicTacToe />}></Route>
+        <Route exact path='Playground' element={<TicTacToe />}></Route>
       </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
